@@ -1,0 +1,41 @@
+body {
+    background: rgba(255, 186, 186, 0.781);
+    font-family: 'Nunito', sans-serif;
+    color: rgb(0, 0, 68);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+a.pseudo-button, input.pseudo-button, button {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid darkgrey;
+    border-radius: 0.3rem;
+    background: lightgray;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.outer-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inner-flex-container {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.team-header {
+    font-weight: 800;
+    text-decoration: underline;
+}
