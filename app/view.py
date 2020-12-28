@@ -16,8 +16,9 @@ class View:
       self.read_view_file()
 
    def create_list(self, data_param):
-      self.read_view_file()
-      tpl_file = self.view_style + '.tpl'
+      #self.read_view_file()
+      #tpl_file = self.view_style + '.tpl'
+      tpl_file = 'index.tpl'
       template = self.lookup.get_template(tpl_file)
       markup = template.render(data = data_param)
       return markup

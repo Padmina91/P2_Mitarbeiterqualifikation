@@ -1,11 +1,42 @@
 body {
-    background: rgba(255, 186, 186, 0.781);
+    background: rgba(187, 255, 178, 0.781);
     font-family: 'Nunito', sans-serif;
     color: rgb(0, 0, 68);
     font-weight: 500;
-    display: flex;
+    display: box;
     justify-content: center;
     font-size: 1.1rem;
+}
+
+.head-flex-container, .body-flex-container {
+    display: flex;
+}
+
+.left-flex-row, .right-flex-row {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    justify-content: center;
+}
+
+.left-flex-row {
+    width: 30%;
+    background: rgba(255, 186, 186, 0.781);
+}
+
+.right-flex-row {
+    width: 70%;
+    background: rgba(98, 224, 255, 0.753);
+}
+
+.menu-item {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.inhalt {
+    margin: 10rem;
 }
 
 a.pseudo-button, input.pseudo-button, button {

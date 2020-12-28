@@ -12,7 +12,7 @@ class Application:
 
    @cherrypy.expose
    def index(self):
-      return self.create_list()
+      return self.create_index()
 
    @cherrypy.expose
    def add(self):
@@ -51,9 +51,9 @@ class Application:
       raise cherrypy.HTTPError(404, msg_s)
    default.exposed = True
 
-   def create_list(self):
-      data = self.database.read()
-      return self.view.create_list(data)
+   def create_index(self):
+      #data = self.database.read()
+      return self.view.create_list(None)
 
    def create_form(self, id = None):
       if id != None:
