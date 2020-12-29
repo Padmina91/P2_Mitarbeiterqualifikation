@@ -15,7 +15,11 @@ class Application:
       return self.create_index()
 
    @cherrypy.expose
-   def add(self):
+   def add_employee(self):
+      return self.create_form()
+
+   @cherrypy.expose
+   def add_training(self):
       return self.create_form()
 
    @cherrypy.expose

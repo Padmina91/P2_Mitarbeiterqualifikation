@@ -11,32 +11,32 @@
     <body>
         <div class="head-flex-container">
             <span class="left-flex-row">
-                <h2>Mitarbeiterqualifikation</h2>
-                <h2>Version 1.0 / 28.12.2020</h2>
+                <h1>Mitarbeiterqualifikation</h1>
+                <h1>Version 1.0 / 28.12.2020</h1>
             </span>
             <span class="right-flex-row">
-                <h2>Marina Inokuchi, Matr.-Nr. 1287686</h2>
+                <h1>Marina Inokuchi, Matr.-Nr. 1287686</h1>
             </span>
         </div>
         <div class="body-flex-container">
             <span class="left-flex-row">
                 <div class="menu-item menu-1">
-                    <a href="">Startseite</a>
+                    <a href="\">Startseite</a>
                 </div>
                 <div class="menu-item menu-2">
-                    <a href="">Pflege Mitarbeiterdaten</a><br>
-                    <a href="">Pflege Weiterbildungen</a>
+                    <a href="/add_employee">Pflege Mitarbeiterdaten</a>
+                    <a href="https://www.google.com/">Pflege Weiterbildungen</a>
                 </div>
                 <div class="menu-item menu-3">
                     <h2>Teilnahme</h2>
-                    <li><a href="">Sichtweise Mitarbeiter</a></li>
-                    <li><a href="">Sichtweise Weiterbildungen</a></li>
+                    <li><a href="https://www.google.com/">Sichtweise Mitarbeiter</a></li>
+                    <li><a href="https://www.google.com/">Sichtweise Weiterbildungen</a></li>
                 </div>
                 <div class="menu-item menu-4">
                     <h2>Auswertungen</h2>
-                    <li><a href="">Mitarbeiter</a></li>
-                    <li><a href="">Weiterbildungen</a></li>
-                    <li><a href="">Zertifikate</a></li>
+                    <li><a href="https://www.google.com/">Mitarbeiter</a></li>
+                    <li><a href="https://www.google.com/">Weiterbildungen</a></li>
+                    <li><a href="https://www.google.com/">Zertifikate</a></li>
                 </div>
             </span>
             <span class="right-flex-row">
