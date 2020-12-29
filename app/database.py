@@ -5,13 +5,13 @@ import os.path
 import codecs
 import json
 
-from . import dataid
+from .dataid import DataId
 
 class Database:
 
    def __init__(self):
       self.data = None
-      self.max_id = dataid.DataId()
+      self.max_id = DataId()
       self.read_data()
 
    def new_entry(self, data):

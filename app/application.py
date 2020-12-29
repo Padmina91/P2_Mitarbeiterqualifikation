@@ -15,16 +15,28 @@ class Application:
       return self.create_index()
 
    @cherrypy.expose
+   def list_employees(self):
+      return self.create_list_employees()
+
+   @cherrypy.expose
+   def list_trainings(self):
+      return self.create_list_trainings()
+   
+   @cherrypy.expose
    def add_employee(self):
-      return self.create_form()
+      return self.create_epmloyee_form()
 
    @cherrypy.expose
    def add_training(self):
-      return self.create_form()
+      return self.create_training_form()
 
    @cherrypy.expose
-   def edit(self, id):
-      return self.create_form(id)
+   def edit_employee(self, id):
+      return self.create_epmloyee_form(id)
+
+   @cherrypy.expose
+   def edit_training(self, id):
+      return self.create_training_form(id)
 
    @cherrypy.expose
    def save(self, id_param, name1, vorname1, matrnr1, semesteranzahl1, name2, vorname2, matrnr2, semesteranzahl2):
@@ -48,25 +60,32 @@ class Application:
 
    @cherrypy.expose
    def default(self, *arguments, **kwargs):
-      msg_s = "unbekannte Anforderung: " + \
-      str(arguments) + \
-      ' ' + \
-      str(kwargs)
+      msg_s = "unbekannte Anforderung: " + str(arguments) + ' ' + str(kwargs)
       raise cherrypy.HTTPError(404, msg_s)
    default.exposed = True
 
    def create_index(self):
       #data = self.database.read()
-      return self.view.create_list(None)
+      return self.view.create_index(None)
 
-   def create_form(self, id = None):
+   @cherrypy.expose
+   def create_list_employees(self):
+      return self.view.create_list_employees()
+
+   @cherrypy.expose
+   def create_list_trainings(self):
+      return self.view.create_list_trainings()
+
+   def create_epmloyee_form(self, id = None):
       if id != None:
          data = self.database.read(id)
       else:
          data = self.database.get_default()
-      return self.view.create_form(id, data)
+      return self.view.create_employee_form(id, data)
 
-   @cherrypy.expose
-   def toggle_view(self):
-      self.view.toggle_view()
-      raise cherrypy.HTTPRedirect('/')
+   def create_training_form(self, id = None):
+      if id != None:
+         data = self.database.read(id)
+      else:
+         data = self.database.get_default()
+      return self.view.create_training_form(id, data)

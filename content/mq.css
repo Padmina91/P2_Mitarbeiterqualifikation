@@ -8,8 +8,7 @@ body {
 }
 
 h1 {
-    font-size: 1.4rem;
-    justify-self: right;
+    font-size: 1.5rem;
 }
 
 .head-flex-container, .body-flex-container {
@@ -25,12 +24,12 @@ h1 {
 }
 
 .left-flex-row {
-    width: 30%;
+    width: 20%;
     background: rgba(255, 186, 186, 0.781);
 }
 
 .right-flex-row {
-    width: 70%;
+    width: 80%;
     background: rgba(98, 224, 255, 0.753);
 }
 
@@ -43,8 +42,54 @@ h1 {
     display: block;
 }
 
-.inhalt {
-    margin: 10rem;
+.content {
+    margin: 0.2rem;
+}
+
+.row-oriented-table {
+    display: flex;
+    flex-wrap: wrap; /* Elemente können bei Platzmangel in die nächste Zeile springen */
+    margin: 1px;
+    padding: 10px;
+    align-items: center;
+}
+
+.nested-row-oriented-table {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rtable-cell, .rtable-head {
+    justify-content: space-around;
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.5em 0.1em;
+    overflow: hidden;
+    border: solid 1px black;
+    background: slategray;
+    text-align: center;
+}
+
+.rtable-head {
+    font-weight: 800;
+}
+
+.rtable-1-cols > .rtable-cell, .rtable-1-cols > .rtable-head {width: 100%;}
+.rtable-2-cols > .rtable-cell, .rtable-2-cols > .rtable-head {width: 50%;}
+.rtable-3-cols > .rtable-cell, .rtable-3-cols > .rtable-head {width: 33.3%;}
+.rtable-4-cols > .rtable-cell, .rtable-4-cols > .rtable-head {width: 25%;}
+.rtable-5-cols > .rtable-cell, .rtable-5-cols > .rtable-head {width: 20%;}
+.rtable-6-cols > .rtable-cell, .rtable-6-cols > .rtable-head {width: 16.6%;}
+.rtable-7-cols > .rtable-cell, .rtable-7-cols > .rtable-head {width: 14.28%;}
+
+input.rtable-cell {
+    background: white;
+    border: 1px solid darkgrey;
+    border-radius: 0.3rem;
 }
 
 a.pseudo-button, input.pseudo-button, button {
@@ -58,23 +103,4 @@ a.pseudo-button, input.pseudo-button, button {
     background: lightgray;
     padding: 0.2rem;
     cursor: pointer;
-}
-
-.outer-flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.inner-flex-container {
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.team-header {
-    font-weight: 800;
-    text-decoration: underline;
 }
