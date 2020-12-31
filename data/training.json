@@ -1,0 +1,70 @@
+{
+   "6": [
+      " Allgemeine Weiterbildung",
+      "2020-12-31",
+      "2021-01-08",
+      "eine allgemeine Weiterbildung, in der alles M\u00f6gliche vermittelt wird.",
+      "30",
+      "10",
+      {
+         "Qualifikation": [
+            "Allgemeine Qualifikation",
+            "Zweite Allgemeine Qualifikation"
+         ]
+      },
+      {
+         "Zertifikat": [
+            "Allgemeines Zertifikat"
+         ]
+      }
+   ],
+   "8": [
+      "Organisationstraining",
+      "2020-12-24",
+      "2020-12-31",
+      "Ein bisschen Organisationstalent f\u00f6rdern, organisiertes Arbeiten trainieren uvm.",
+      "20",
+      "6",
+      {
+         "Qualifikation": [
+            "Organisationstalent Qualifikation"
+         ]
+      },
+      {
+         "Zertifikat": [
+            "Organisationstalent Zertifikat"
+         ]
+      }
+   ],
+   "9": [
+      "Weiterbildung F\u00fchrungskr\u00e4fte",
+      "2021-01-04",
+      "2021-01-15",
+      "Pr\u00e4sentationstraining, Mediation, Mitarbeitermotivation",
+      "50",
+      "15",
+      {
+         "Qualifikation": [
+            "F\u00fchrungskr\u00e4ft Qualifikation",
+            "Zweite F\u00fchrungskr\u00e4ft Qualifikation"
+         ]
+      },
+      {
+         "Zertifikat": []
+      }
+   ],
+   "10": [
+      "asdf",
+      "2020-12-10",
+      "2021-01-02",
+      "asdf",
+      "234",
+      "1",
+      {
+         "Qualifikation": []
+      },
+      {
+         "Zertifikat": []
+      }
+   ]
+}

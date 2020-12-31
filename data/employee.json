@@ -1,0 +1,29 @@
+{
+   "3": [
+      "Musterfrau",
+      "Susanne",
+      "Doktor",
+      "Programmiererin",
+      {
+         "6": "angemeldet"
+      }
+   ],
+   "4": [
+      "Mustermann",
+      "Max",
+      "Professor",
+      "Prof an der HSNR",
+      {
+         "6": "angemeldet"
+      }
+   ],
+   "7": [
+      "Schlaumeier",
+      "Hans",
+      "Sehr schlauer Mensch",
+      "Sehr schlaue T\u00e4tigkeit",
+      {
+         "6": "angemeldet"
+      }
+   ]
+}

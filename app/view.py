@@ -20,14 +20,14 @@ class View:
       markup = template.render(data = data_param)
       return markup
 
-   def create_list_employees(self):
+   def create_list_employees(self, data_param):
       template = self.lookup.get_template('list_employees.tpl')
-      markup = template.render()
+      markup = template.render(data = data_param)
       return markup
 
-   def create_list_trainings(self):
+   def create_list_trainings(self, data_param):
       template = self.lookup.get_template('list_trainings.tpl')
-      markup = template.render()
+      markup = template.render(data = data_param)
       return markup
 
    def create_employee_form(self, id, data_param):
@@ -38,4 +38,14 @@ class View:
    def create_training_form(self, id, data_param):
       template = self.lookup.get_template('training_form.tpl')
       markup = template.render(data = data_param, key = id)
+      return markup
+
+   def create_show_employee_form(self, id):
+      template = self.lookup.get_template('show_employee.tpl')
+      markup = template.render(key = id)
+      return markup
+
+   def create_show_training_form(self, id):
+      template = self.lookup.get_template('show_training.tpl')
+      markup = template.render(key = id)
       return markup
