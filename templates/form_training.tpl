@@ -1,7 +1,7 @@
 <%inherit file="base.tpl"/>
 
 <%block name="body">
-    <form action="/save_training" name="training-form" method="POST">
+    <form action="/save_training" id="training-form" method="POST">
     <input type="hidden" value="${key}" id="id_param" name="id_param" />
         <div class="row-oriented-table rtable-2-cols">
             <div class="rtable-cell">Bezeichnung</div>
