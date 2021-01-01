@@ -1,7 +1,7 @@
 <%inherit file="base.tpl"/>
 
 <%block name="body">
-
-    Platzhalter für show_training.tpl
-
+    <div>
+        Platzhalter show_training
+    </div>
 </%block>

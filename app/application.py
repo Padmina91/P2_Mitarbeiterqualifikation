@@ -89,14 +89,14 @@ class Application:
    @cherrypy.expose
    def show_employee(self, id):
       if id in self.database.employee_data:
-         self.create_show_employee_form(id)
+         self.create_show_employee(id)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
    @cherrypy.expose
    def show_training(self, id):
       if id in self.database.training_data:
-         self.create_show_training_form(id)
+         self.create_show_training(id)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
@@ -151,11 +151,11 @@ class Application:
          data = self.database.get_training_default()
       return self.view.create_training_form(id, data)
 
-   def create_show_employee_form(self, id):
-      return self.view.create_show_employee_form(id)
+   def create_show_employee(self, id):
+      return self.view.create_show_employee(id)
 
-   def create_show_training_form(self, id):
-      return self.view.create_show_training_form(id)
+   def create_show_training(self, id):
+      return self.view.create_show_training(id)
 
    def is_date_correct(self, von, bis):
       start_date = datetime.datetime(int(von[:4]), int(von[5:7]), int(von[8:10]))

@@ -14,38 +14,35 @@ class View:
       self.lookup = TemplateLookup('./templates')
       self.data_dir = os.path.join(Path(os.path.abspath(__file__)).parent.parent, 'data')
 
-   def create_index(self, data_param):
-      tpl_file = 'index.tpl'
+   def create_tpl(self, tpl_name = 'index', id = None, data_param = None):
+      tpl_file = tpl_name + '.tpl'
       template = self.lookup.get_template(tpl_file)
-      markup = template.render(data = data_param)
+      markup = template.render(key = id, data = data_param)
       return markup
+
+   def create_index(self, data_param):
+      return self.create_tpl(data_param = data_param)
 
    def create_list_employees(self, data_param):
-      template = self.lookup.get_template('list_employees.tpl')
-      markup = template.render(data = data_param)
-      return markup
+      tpl_name = 'list_employees'
+      return self.create_tpl(tpl_name = tpl_name, data_param = data_param)
 
    def create_list_trainings(self, data_param):
-      template = self.lookup.get_template('list_trainings.tpl')
-      markup = template.render(data = data_param)
-      return markup
+      tpl_name = 'list_trainings'
+      return self.create_tpl(tpl_name = tpl_name, data_param = data_param)
 
    def create_employee_form(self, id, data_param):
-      template = self.lookup.get_template('employee_form.tpl')
-      markup = template.render(data = data_param, key = id)
-      return markup
+      tpl_name = 'employee_form'
+      return self.create_tpl(tpl_name, id, data_param)
 
    def create_training_form(self, id, data_param):
-      template = self.lookup.get_template('training_form.tpl')
-      markup = template.render(data = data_param, key = id)
-      return markup
+      tpl_name = 'training_form'
+      return self.create_tpl(tpl_name, id, data_param)
 
-   def create_show_employee_form(self, id):
-      template = self.lookup.get_template('show_employee.tpl')
-      markup = template.render(key = id)
-      return markup
+   def create_show_employee(self, id):
+      tpl_name = 'show_employee'
+      return self.create_tpl(tpl_name = tpl_name, id = id)
 
-   def create_show_training_form(self, id):
-      template = self.lookup.get_template('show_training.tpl')
-      markup = template.render(key = id)
-      return markup
+   def create_show_training(self, id):
+      tpl_name = 'show_training'
+      return self.create_tpl(tpl_name = tpl_name, id = id)
