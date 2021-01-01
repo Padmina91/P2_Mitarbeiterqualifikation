@@ -16,15 +16,15 @@ class Database:
       self.read_employee_data()
       self.read_training_data()
 
-   def new_employee_entry(self, data):
+   def new_employee_entry(self, employee_data):
       id = self.max_id.create_new_id()
-      self.employee_data[str(id)] = data
+      self.employee_data[str(id)] = employee_data
       self.save_employee_data()
       return str(id)
 
-   def new_training_entry(self, data):
+   def new_training_entry(self, training_data):
       id = self.max_id.create_new_id()
-      self.training_data[str(id)] = data
+      self.training_data[str(id)] = training_data
       self.save_training_data()
       return str(id)
 
@@ -32,32 +32,30 @@ class Database:
       data = None
       if id is None:
          data = self.employee_data
-      else:
-         if id in self.employee_data:
-               data = self.employee_data[id]
+      elif id in self.employee_data:
+         data = self.employee_data[id]
       return data
 
    def read_training(self, id = None):
       data = None
       if id is None:
          data = self.training_data
-      else:
-         if id in self.training_data:
-               data = self.training_data[id]
+      elif id in self.training_data:
+         data = self.training_data[id]
       return data
 
-   def update_employee_entry(self, id, data):
+   def update_employee_entry(self, id, employee_data):
       status = False
       if id in self.employee_data:
-         self.employee_data[id] = data
+         self.employee_data[id] = employee_data
          self.save_employee_data()
          status = True
       return status
 
-   def update_training_entry(self, id, data):
+   def update_training_entry(self, id, training_data):
       status = False
       if id in self.training_data:
-         self.training_data[id] = data
+         self.training_data[id] = training_data
          self.save_training_data()
          status = True
       return status
@@ -80,7 +78,7 @@ class Database:
       return ['', '', '', '']
 
    def get_training_default(self):
-      return ['', '', '', '', '', '']
+      return ['', '', '', '', '', '', [], []]
 
    def read_employee_data(self):
       try:

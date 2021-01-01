@@ -7,7 +7,6 @@ import cherrypy
 
 from app import application
 
-
 class Server:
 
     def main(self):
@@ -35,7 +34,6 @@ class Server:
     @cherrypy.expose
     def index(self):
         cherrypy.engine.exit()
-
 
 if __name__ == '__main__':
     server = Server()

@@ -10,4 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
          }
       }, false);
    }
+
+   const submit_buttons = document.getElementsByClassName("submit-button");
+   const training_form = document.getElementsByName("training-form");
+   for (let submit_button of submit_buttons) {
+      submit_button.addEventListener('click', function() {
+         training_form.submit();
+      }, false);
+   }
 });

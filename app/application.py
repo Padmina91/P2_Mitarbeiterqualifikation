@@ -52,19 +52,34 @@ class Application:
       raise cherrypy.HTTPRedirect('/list_employees')
 
    @cherrypy.expose
-   def save_training(self, id_param, bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln):
+   def save_training(self, id_param, bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln, qualification0, zertifikat):
       if self.is_date_correct(von, bis):
          id = id_param
-         data = [bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln]
+         data = [bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln, [qualification0], [zertifikat]]
          if id != "None":
-            data.append(self.database.training_data[id][6])
-            data.append(self.database.training_data[id][7])
+            data[6] = self.database.training_data[id][6] # Qualifikationen (1 bis n)
+            data[6][0] = qualification0
             self.database.update_training_entry(id, data)
          else:
-            data.append({"Qualifikation": []})
-            data.append({"Zertifikat": []})
             self.database.new_training_entry(data)
       raise cherrypy.HTTPRedirect('/list_trainings')
+
+   @cherrypy.expose
+   def add_qualification(self, id_param = None):
+      id = id_param
+      if id != "None" and id in self.database.training_data:
+         new_index = len(self.database.training_data[id][6])
+         return self.create_edit_qualification(id, new_index)
+      else:
+         raise cherrypy.HTTPError(500, "Es wurde keine valide Weiterbildung ausgewählt.")
+
+   @cherrypy.expose
+   def edit_qualification(self, id_param = None, index = None):
+      id = id_param
+      if id != "None" and index != "None" and id in self.database.training_data and len(self.database.training_data[id][6]) > int(index):
+            return self.create_edit_qualification(id, index)
+      else:
+         raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
    @cherrypy.expose
    def delete_employee(self, id_param):
@@ -89,14 +104,14 @@ class Application:
    @cherrypy.expose
    def show_employee(self, id):
       if id in self.database.employee_data:
-         self.create_show_employee(id)
+         return self.create_show_employee(id)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
    @cherrypy.expose
    def show_training(self, id):
       if id in self.database.training_data:
-         self.create_show_training(id)
+         return self.create_show_training(id)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
@@ -152,10 +167,16 @@ class Application:
       return self.view.create_training_form(id, data)
 
    def create_show_employee(self, id):
-      return self.view.create_show_employee(id)
+      employee_data = self.database.employee_data[id]
+      training_data = self.database.training_data
+      return self.view.create_show_employee(id, employee_data, training_data)
 
    def create_show_training(self, id):
-      return self.view.create_show_training(id)
+      data = self.database.training_data[id]
+      return self.view.create_show_training(id, data)
+
+   def create_edit_qualification(self, id, index):
+      return self.view.create_edit_qualification(id, index)
 
    def is_date_correct(self, von, bis):
       start_date = datetime.datetime(int(von[:4]), int(von[5:7]), int(von[8:10]))

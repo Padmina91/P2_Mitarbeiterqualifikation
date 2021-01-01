@@ -6,17 +6,13 @@
       "eine allgemeine Weiterbildung, in der alles M\u00f6gliche vermittelt wird.",
       "30",
       "10",
-      {
-         "Qualifikation": [
-            "Allgemeine Qualifikation",
-            "Zweite Allgemeine Qualifikation"
-         ]
-      },
-      {
-         "Zertifikat": [
-            "Allgemeines Zertifikat"
-         ]
-      }
+      [
+         "Allgemeine Qualifikation",
+         "Zweite Allgemeine Qualifikation"
+      ],
+      [
+         "Allgemeines Zertifikat"
+      ]
    ],
    "8": [
       "Organisationstraining",
@@ -25,16 +21,12 @@
       "Ein bisschen Organisationstalent f\u00f6rdern, organisiertes Arbeiten trainieren uvm.",
       "20",
       "6",
-      {
-         "Qualifikation": [
-            "Organisationstalent Qualifikation"
-         ]
-      },
-      {
-         "Zertifikat": [
-            "Organisationstalent Zertifikat"
-         ]
-      }
+      [
+         "Organisationstalent Qualifikation"
+      ],
+      [
+         "Organisationstalent Zertifikat"
+      ]
    ],
    "9": [
       "Weiterbildung F\u00fchrungskr\u00e4fte",
@@ -43,14 +35,10 @@
       "Pr\u00e4sentationstraining, Mediation, Mitarbeitermotivation",
       "50",
       "15",
-      {
-         "Qualifikation": [
-            "F\u00fchrungskr\u00e4ft Qualifikation",
-            "Zweite F\u00fchrungskr\u00e4ft Qualifikation"
-         ]
-      },
-      {
-         "Zertifikat": []
-      }
+      [
+         "F\u00fchrungskr\u00e4ft Qualifikation",
+         "Zweite F\u00fchrungskr\u00e4ft Qualifikation"
+      ],
+      []
    ]
 }
