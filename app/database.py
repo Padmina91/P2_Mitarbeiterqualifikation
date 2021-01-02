@@ -60,6 +60,34 @@ class Database:
          status = True
       return status
 
+   def save_qualification(self, id, index, bezeichnung):
+      status = False
+      if id in self.training_data:
+         if int(index) == len(self.training_data[id][6]):
+            self.training_data[id][6].append(bezeichnung)
+         else:
+            self.training_data[id][6][int(index)] = bezeichnung
+         self.save_training_data()
+         status = True
+      return status
+
+   def register_for_training(self, id_employee, id_training):
+      status = False
+      if id_employee in self.employee_data and id_training in self.training_data:
+         self.employee_data[id_employee][4][id_training] = "angemeldet"
+         self.save_employee_data()
+         status = True
+      return status
+
+   def cancel_registration(self, id_employee, id_training):
+      status = False
+      if id_employee in self.employee_data and id_training in self.training_data:
+         if id_training in self.employee_data[id_employee][4] and self.employee_data[id_employee][4][id_training] == "angemeldet":
+            self.employee_data[id_employee][4][id_training] = "storniert"
+            self.save_employee_data()
+         status = True
+      return status
+
    def delete_employee_entry(self, id):
       status = False
       if self.employee_data.pop(id, None) != None:

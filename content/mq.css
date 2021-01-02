@@ -1,5 +1,5 @@
 body {
-    background: rgba(187, 255, 178, 0.781);
+    background: rgba(195, 231, 255, 0.781);
     font-family: 'Nunito', sans-serif;
     color: rgb(0, 0, 68);
     font-weight: 500;
@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .head-flex-container, .body-flex-container {
@@ -20,12 +20,11 @@ h1 {
     flex-direction: column;
     margin: 1.5rem;
     padding: 1.5rem;
-    justify-content: center;
 }
 
 .left-flex-row {
     width: 20%;
-    background: rgba(255, 186, 186, 0.781);
+    background: rgba(255, 153, 216, 0.781);
 }
 
 .right-flex-row {

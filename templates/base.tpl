@@ -29,8 +29,8 @@
                 </div>
                 <div class="menu-item menu-3">
                     <h2>Teilnahme</h2>
-                    <li><a href="https://www.google.com/">Sichtweise Mitarbeiter</a></li>
-                    <li><a href="https://www.google.com/">Sichtweise Weiterbildungen</a></li>
+                    <li><a href="/participation_employees">Sichtweise Mitarbeiter</a></li>
+                    <li><a href="/participation_trainings">Sichtweise Weiterbildungen</a></li>
                 </div>
                 <div class="menu-item menu-4">
                     <h2>Auswertungen</h2>

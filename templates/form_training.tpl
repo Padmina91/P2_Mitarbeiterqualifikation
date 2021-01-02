@@ -1,8 +1,8 @@
 <%inherit file="base.tpl"/>
 
 <%block name="body">
-    <form action="/save_training" id="training-form" method="POST">
-    <input type="hidden" value="${key}" id="id_param" name="id_param" />
+    <form action="/save_training" id="training-form" name="training-form" class="training-form" method="POST">
+        <input type="hidden" value="${key}" id="id_param" name="id_param" />
         <div class="row-oriented-table rtable-2-cols">
             <div class="rtable-cell">Bezeichnung</div>
             <input type="text"
@@ -41,7 +41,7 @@
                         id="minTeiln"
                         name="minTeiln" required />
             <div class="rtable-cell">Haupt-Qualifikation</div>
-            <% qualification_existing = len(training_data[7]) > 0 %>
+            <% qualification_existing = len(training_data[6]) > 0 %>
             % if qualification_existing:
             <input type="text"
                         class="rtable-cell"
@@ -72,6 +72,8 @@
             % endif
         </div>
 
+        <% training_already_saved = key != None %>
+        % if training_already_saved:
         <div class="row-oriented-table rtable-2-cols">
             <!-- Table Head -->
             <div class="rtable-head">Weitere Qualifikationen</div>
@@ -93,9 +95,10 @@
 
         <div class="row-oriented-table rtable-1-cols">
             <div class="rtable-cell">
-                <a href="/add_qualification/${key}" class="pseudo-button submit-button">weitere Qualifikation erfassen</a>
+                <a href="/add_qualification/${key}" class="pseudo-button">weitere Qualifikation erfassen</a>
             </div>
         </div>
+        % endif
 
         <div class="row-oriented-table rtable-2-cols">
             <div class="rtable-cell">

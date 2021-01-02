@@ -47,6 +47,18 @@ class View:
       tpl_name = 'show_training'
       return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param)
 
-   def create_edit_qualification(self, id, index):
+   def create_edit_qualification(self, id, index, training_data_param):
       tpl_name = "form_qualification"
-      return self.create_tpl(tpl_name, id = id, index = index)
+      return self.create_tpl(tpl_name = tpl_name, id = id, index = index, training_data_param = training_data_param)
+
+   def show_participation_employees(self, employee_data_param):
+      tpl_name = "participation_employees"
+      return self.create_tpl(tpl_name = tpl_name, employee_data_param = employee_data_param)
+
+   def show_participation_trainings(self, training_data_param):
+      tpl_name = "participation_trainings"
+      return self.create_tpl(tpl_name = tpl_name, training_data_param = training_data_param)
+
+   def show_participation_employee(self, id, employee_data_param, data_param):
+      tpl_name = "participation_employee"
+      return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)

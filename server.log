@@ -2557,3 +2557,1372 @@ Request Headers:
 [01/Jan/2021:20:15:07] ENGINE Bus STARTING
 [01/Jan/2021:20:15:07] ENGINE Serving on http://127.0.0.1:8080
 [01/Jan/2021:20:15:07] ENGINE Bus STARTED
+[01/Jan/2021:20:17:53] ENGINE Bus STARTING
+[01/Jan/2021:20:17:53] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:20:17:53] ENGINE Bus STARTED
+[01/Jan/2021:20:20:33] ENGINE Bus STARTING
+[01/Jan/2021:20:20:33] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:20:20:33] ENGINE Bus STARTED
+[01/Jan/2021:20:36:01] ENGINE Bus STARTING
+[01/Jan/2021:20:36:01] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:20:36:01] ENGINE Bus STARTED
+[01/Jan/2021:20:56:01] ENGINE Bus STARTING
+[01/Jan/2021:20:56:01] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:20:56:01] ENGINE Bus STARTED
+[01/Jan/2021:21:12:47] ENGINE Bus STARTING
+[01/Jan/2021:21:12:47] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:21:12:47] ENGINE Bus STARTED
+[01/Jan/2021:21:13:34] ENGINE Bus STARTING
+[01/Jan/2021:21:13:34] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:21:13:34] ENGINE Bus STARTED
+[01/Jan/2021:21:18:41] ENGINE Bus STARTING
+[01/Jan/2021:21:18:42] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:21:18:42] ENGINE Bus STARTED
+[01/Jan/2021:21:19:39] ENGINE Bus STARTING
+[01/Jan/2021:21:19:39] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:21:19:39] ENGINE Bus STARTED
+[01/Jan/2021:21:22:03] ENGINE Bus STARTING
+[01/Jan/2021:21:22:03] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:21:22:03] ENGINE Bus STARTED
+[01/Jan/2021:21:27:11] ENGINE Bus STARTING
+[01/Jan/2021:21:27:11] ENGINE Serving on http://127.0.0.1:8080
+[01/Jan/2021:21:27:11] ENGINE Bus STARTED
+[02/Jan/2021:12:47:14] ENGINE Bus STARTING
+[02/Jan/2021:12:47:14] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:12:47:14] ENGINE Bus STARTED
+[02/Jan/2021:12:51:06] ENGINE Bus STARTING
+[02/Jan/2021:12:51:06] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:12:51:06] ENGINE Bus STARTED
+[02/Jan/2021:12:55:09] ENGINE Bus STARTING
+[02/Jan/2021:12:55:09] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:12:55:09] ENGINE Bus STARTED
+[02/Jan/2021:13:16:32] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 71, in add_qualification
+    if id != "None" and id in training_data:
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 178, in create_edit_qualification
+    return self.view.create_show_training(id, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 52, in create_edit_qualification
+    return self.create_tpl(tpl_name, id = id, index = index, training_data_param = training_data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "form_qualification_tpl", line 56, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[02/Jan/2021:13:16:32] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/edit_training/9
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:13:29:21] ENGINE Bus STARTING
+[02/Jan/2021:13:29:21] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:13:29:21] ENGINE Bus STARTED
+[02/Jan/2021:13:30:05] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 86, in edit_qualification
+    return self.create_edit_qualification(id, index, training_data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 185, in create_edit_qualification
+    return self.view.create_edit_qualification(id, index, training_data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 52, in create_edit_qualification
+    return self.create_tpl(tpl_name, id = id, index = index, training_data_param = training_data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "form_qualification_tpl", line 68, in render_body
+TypeError: '>' not supported between instances of 'int' and 'str'
+[02/Jan/2021:13:30:05] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/edit_training/6
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:13:30:28] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 86, in edit_qualification
+    return self.create_edit_qualification(id, index, training_data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 185, in create_edit_qualification
+    return self.view.create_edit_qualification(id, index, training_data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 52, in create_edit_qualification
+    return self.create_tpl(tpl_name, id = id, index = index, training_data_param = training_data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "form_qualification_tpl", line 75, in render_body
+TypeError: list indices must be integers or slices, not str
+[02/Jan/2021:13:30:28] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/edit_training/6
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:13:33:57] ENGINE Bus STARTING
+[02/Jan/2021:13:33:57] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:13:33:57] ENGINE Bus STARTED
+[02/Jan/2021:13:35:32] ENGINE Bus STARTING
+[02/Jan/2021:13:35:32] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:13:35:32] ENGINE Bus STARTED
+[02/Jan/2021:13:46:00] ENGINE Bus STARTING
+[02/Jan/2021:13:46:00] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:13:46:00] ENGINE Bus STARTED
+[02/Jan/2021:13:46:14] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 70, in save_qualification
+    if id != "None" and id in self.database.training_data and len(self.database.training_data[id][6]) >= index:
+TypeError: '>=' not supported between instances of 'int' and 'str'
+[02/Jan/2021:13:46:14] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  ORIGIN: http://127.0.0.1:8080
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/add_qualification/6
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 38
+[02/Jan/2021:13:46:37] ENGINE Bus STARTING
+[02/Jan/2021:13:46:37] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:13:46:37] ENGINE Bus STARTED
+[02/Jan/2021:13:46:42] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 71, in save_qualification
+    self.database.save_qualification(id, index, bezeichnung)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\database.py", line 66, in save_qualification
+    self.training_data[id][6][int(index)] = bezeichnung
+IndexError: list assignment index out of range
+[02/Jan/2021:13:46:42] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  ORIGIN: http://127.0.0.1:8080
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/add_qualification/6
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 38
+[02/Jan/2021:13:49:18] ENGINE Bus STARTING
+[02/Jan/2021:13:49:19] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:13:49:19] ENGINE Bus STARTED
+[02/Jan/2021:13:55:57] ENGINE Bus STARTING
+[02/Jan/2021:13:55:57] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:13:55:57] ENGINE Bus STARTED
+[02/Jan/2021:13:57:27] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 32, in add_training
+    return self.create_training_form()
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 178, in create_training_form
+    return self.view.create_training_form(id, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 40, in create_training_form
+    return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "form_training_tpl", line 94, in render_body
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+[02/Jan/2021:13:57:27] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/list_trainings
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:13:58:10] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\pyparser.py", line 45, in parse
+    return _ast_util.parse(code, "<unknown>", mode)
+  File "C:\Python39\lib\site-packages\mako\_ast_util.py", line 92, in parse
+    return compile(expr, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 1
+    training_already_saved = key > 0) 
+                                    ^
+SyntaxError: unmatched ')'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 32, in add_training
+    return self.create_training_form()
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 178, in create_training_form
+    return self.view.create_training_form(id, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 40, in create_training_form
+    return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 19, in create_tpl
+    template = self.lookup.get_template(tpl_file)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 347, in _check
+    return self._load(template.filename, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 272, in parse
+    if self.match_python_block():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 412, in match_python_block
+    self.append_node(
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 152, in append_node
+    node = nodecls(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\mako\parsetree.py", line 159, in __init__
+    self.code = ast.PythonCode(text, **self.exception_kwargs)
+  File "C:\Python39\lib\site-packages\mako\ast.py", line 43, in __init__
+    expr = pyparser.parse(code.lstrip(), "exec", **exception_kwargs)
+  File "C:\Python39\lib\site-packages\mako\pyparser.py", line 47, in parse
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: (SyntaxError) unmatched ')' (<unknown>, line 1) ('training_already_saved = key > 0) \n') in file 'templates/form_training.tpl' at line: 75 char: 9
+[02/Jan/2021:13:58:10] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/list_trainings
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:13:58:25] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 32, in add_training
+    return self.create_training_form()
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 178, in create_training_form
+    return self.view.create_training_form(id, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 40, in create_training_form
+    return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "form_training_tpl", line 90, in render_body
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+[02/Jan/2021:13:58:25] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/list_trainings
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:14:15:27] ENGINE Bus STARTING
+[02/Jan/2021:14:15:27] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:14:15:27] ENGINE Bus STARTED
+[02/Jan/2021:14:15:51] ENGINE Bus STARTING
+[02/Jan/2021:14:15:51] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:14:15:51] ENGINE Bus STARTED
+[02/Jan/2021:15:28:29] ENGINE Bus STARTING
+[02/Jan/2021:15:28:29] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:15:28:29] ENGINE Bus STARTED
+[02/Jan/2021:15:28:36] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'participation_employee.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, training_data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 64, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, training_data_param = training_data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 19, in create_tpl
+    template = self.lookup.get_template(tpl_file)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 262, in get_template
+    raise exceptions.TopLevelLookupException(
+mako.exceptions.TopLevelLookupException: Cant locate template for uri 'participation_employee.tpl'
+[02/Jan/2021:15:28:36] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:15:30:26] ENGINE Bus STARTING
+[02/Jan/2021:15:30:26] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:15:30:26] ENGINE Bus STARTED
+[02/Jan/2021:15:46:48] ENGINE Bus STARTING
+[02/Jan/2021:15:46:48] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:15:46:48] ENGINE Bus STARTED
+[02/Jan/2021:16:33:18] ENGINE Bus STARTING
+[02/Jan/2021:16:33:19] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:16:33:19] ENGINE Bus STARTED
+[02/Jan/2021:16:33:22] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 64, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:33:22] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:35:04] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 64, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:35:04] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:35:08] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 64, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:35:08] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:37:12] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 64, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:37:12] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:37:22] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 64, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:37:22] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:38:39] ENGINE Bus STARTING
+[02/Jan/2021:16:38:39] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:16:38:39] ENGINE Bus STARTED
+[02/Jan/2021:16:38:41] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:38:41] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:42:14] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:42:14] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:46:24] ENGINE Bus STARTING
+[02/Jan/2021:16:46:24] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:16:46:24] ENGINE Bus STARTED
+[02/Jan/2021:16:46:28] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 56, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[02/Jan/2021:16:46:28] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:47:59] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 56, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[02/Jan/2021:16:47:59] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:48:02] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 56, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[02/Jan/2021:16:48:02] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:48:04] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 56, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[02/Jan/2021:16:48:04] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:49:38] ENGINE Bus STARTING
+[02/Jan/2021:16:49:38] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:16:49:38] ENGINE Bus STARTED
+[02/Jan/2021:16:50:37] ENGINE Bus STARTING
+[02/Jan/2021:16:50:37] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:16:50:37] ENGINE Bus STARTED
+[02/Jan/2021:16:50:51] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 56, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[02/Jan/2021:16:50:51] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:51:40] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 52, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[02/Jan/2021:16:51:40] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:52:42] ENGINE Bus STARTING
+[02/Jan/2021:16:52:42] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:16:52:42] ENGINE Bus STARTED
+[02/Jan/2021:16:53:20] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 66, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:53:20] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:55:15] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 62, in render_body
+IndexError: list index out of range
+[02/Jan/2021:16:55:15] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:55:44] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 64, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:55:45] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:16:55:54] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 64, in render_body
+IndexError: string index out of range
+[02/Jan/2021:16:55:54] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:17:01:39] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 139, in participation_employee
+    return self.view.show_participation_employee(id, employee_data, data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 68, in show_participation_employee
+    return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 20, in create_tpl
+    markup = template.render(key = id, data = data_param, employee_data = employee_data_param, training_data = training_data_param, index = index)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "base_tpl", line 22, in render_body
+  File "participation_employee_tpl", line 82, in render_body
+TypeError: 'Undefined' object is not subscriptable
+[02/Jan/2021:17:01:39] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/participation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[02/Jan/2021:17:05:28] ENGINE Bus STARTING
+[02/Jan/2021:17:05:28] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:05:28] ENGINE Bus STARTED
+[02/Jan/2021:17:12:20] ENGINE Bus STARTING
+[02/Jan/2021:17:12:21] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:12:21] ENGINE Bus STARTED
+[02/Jan/2021:17:20:00] ENGINE Bus STARTING
+[02/Jan/2021:17:20:00] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:20:00] ENGINE Bus STARTED
+[02/Jan/2021:17:20:26] ENGINE Bus STARTING
+[02/Jan/2021:17:20:26] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:20:26] ENGINE Bus STARTED
+[02/Jan/2021:17:27:09] ENGINE Bus STARTING
+[02/Jan/2021:17:27:09] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:27:09] ENGINE Bus STARTED
+[02/Jan/2021:17:31:43] ENGINE Bus STARTING
+[02/Jan/2021:17:31:43] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:31:43] ENGINE Bus STARTED
+[02/Jan/2021:17:38:00] ENGINE Bus STARTING
+[02/Jan/2021:17:38:00] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:38:00] ENGINE Bus STARTED
+[02/Jan/2021:17:45:37] ENGINE Bus STARTING
+[02/Jan/2021:17:45:37] ENGINE Serving on http://127.0.0.1:8080
+[02/Jan/2021:17:45:37] ENGINE Bus STARTED
