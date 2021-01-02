@@ -60,5 +60,33 @@
       [
          "Irgendein Zertifikat"
       ]
+   ],
+   "12": [
+      "Abgeschlossene Weiterbildung 1",
+      "2020-12-07",
+      "2020-12-21",
+      "Diese Weiterbildung ist bereits abgeschlossen.",
+      "50",
+      "1",
+      [
+         "Eine abgeschlossene Qualifikation"
+      ],
+      [
+         "Ein abgeschlossenes Zertifikat"
+      ]
+   ],
+   "13": [
+      "Abgeschlossene Weiterbildung 2",
+      "2020-12-21",
+      "2020-12-22",
+      "Eine zweite abgeschlossene Weiterbildung.",
+      "50",
+      "1",
+      [
+         "Eine abgeschlossene Qualifikation"
+      ],
+      [
+         ""
+      ]
    ]
 }

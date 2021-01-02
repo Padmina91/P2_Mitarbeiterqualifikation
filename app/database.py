@@ -82,10 +82,20 @@ class Database:
    def cancel_registration(self, id_employee, id_training):
       status = False
       if id_employee in self.employee_data and id_training in self.training_data:
-         if id_training in self.employee_data[id_employee][4] and self.employee_data[id_employee][4][id_training] == "angemeldet":
+         training_status = self.employee_data[id_employee][4].get(id_training, 0)
+         if training_status == "angemeldet":
             self.employee_data[id_employee][4][id_training] = "storniert"
             self.save_employee_data()
          status = True
+      return status
+
+   def cancel_participation(self, id_training, id_employee):
+      status = False
+      if id_employee in self.employee_data and id_training in self.training_data:
+         training_status = self.employee_data[id_employee][4].get(id_training, 0)
+         if training_status == "angemeldet" or training_status == "nimmt teil":
+            self.employee_data[id_employee][4][id_training] = "abgebrochen"
+            self.save_employee_data()
       return status
 
    def delete_employee_entry(self, id):

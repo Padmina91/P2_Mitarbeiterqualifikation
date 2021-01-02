@@ -7,7 +7,9 @@
       {
          "6": "storniert",
          "9": "angemeldet",
-         "8": "storniert"
+         "8": "storniert",
+         "11": "abgebrochen",
+         "12": "nimmt teil"
       }
    ],
    "4": [
@@ -16,7 +18,9 @@
       "Professor",
       "Prof an der HSNR",
       {
-         "6": "angemeldet"
+         "6": "angemeldet",
+         "11": "abgebrochen",
+         "12": "erfolgreich beendet"
       }
    ],
    "7": [
@@ -26,7 +30,9 @@
       "Sehr schlaue T\u00e4tigkeit",
       {
          "6": "angemeldet",
-         "8": "erfolgreich beendet"
+         "8": "erfolgreich beendet",
+         "11": "nimmt teil",
+         "12": "nicht erfolgreich beendet"
       }
    ]
 }

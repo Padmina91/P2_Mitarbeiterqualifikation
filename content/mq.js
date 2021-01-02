@@ -23,8 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
    const cancel_registration_buttons = document.getElementsByClassName("cancel-training");
    for (let cancel_registration_button of cancel_registration_buttons) {
       cancel_registration_button.addEventListener('click', function(event) {
-         let cancel_decision = confirm("Wollen Sie diese Teilnahme wirklich stornieren?");
-         if (!cancel_decision) {
+         let cancel_registration_decision = confirm("Wollen Sie diese Teilnahme wirklich stornieren?");
+         if (!cancel_registration_decision) {
+            event.preventDefault();
+         }
+      }, false);
+   }
+
+   const cancel_participation_buttons = document.getElementsByClassName("cancel-participation");
+   for (let cancel_participation_button of cancel_participation_buttons) {
+      cancel_participation_button.addEventListener('click', function(event) {
+         let cancel_participation_decision = confirm("Wollen Sie diese Weiterbildung wirklich abbrechen?");
+         if (!cancel_participation_decision) {
             event.preventDefault();
          }
       }, false);

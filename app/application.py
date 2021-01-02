@@ -169,6 +169,11 @@ class Application:
             return self.view.show_participation_training_finished(id, training_data, data)
 
    @cherrypy.expose
+   def cancel_participation(self, id_training, id_employee):
+      self.database.cancel_participation(id_training, id_employee)
+      raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+
+   @cherrypy.expose
    def default(self, *arguments, **kwargs):
       msg_s = "unbekannte Anforderung: " + str(arguments) + ' ' + str(kwargs)
       raise cherrypy.HTTPError(404, msg_s)
@@ -277,9 +282,10 @@ class Application:
    def calculate_participation_training(self, id):
       data = [] # Aufbau jeweils: [id_employee, name, vorname, akad. Grade, Tätigkeit, Teilnahmestatus]
       if id in self.database.training_data:
-         for k, v in self.database.employee_data:
-            if id in v[4] and v[4][id] == "angemeldet" or v[4][id] == "nimmt teil" or v[4][id] == "nicht erfolgreich beendet" or v[4][id] == "erfolgreich beendet":
-               data.append([k, v[0], v[1], v[2], v[3], v[4][id]])
+         for k, v in self.database.employee_data.items():
+            status = v[4].get(id, 0)
+            if status == "angemeldet" or status == "nimmt teil" or status == "nicht erfolgreich beendet" or status == "erfolgreich beendet":
+               data.append([k, v[0], v[1], v[2], v[3], status])
       return data
 
    def get_date(self, date):

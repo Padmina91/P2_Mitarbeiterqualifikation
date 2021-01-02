@@ -1,5 +1,7 @@
 <%inherit file="base.tpl"/>
 
 <%block name="body">
-    Platzhalter participation_training_finished
+    training_data: ${training_data} <br/>
+    data: ${data} <br/>
+    key: ${key}
 </%block>
