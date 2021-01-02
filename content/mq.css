@@ -102,4 +102,5 @@ a.pseudo-button, input.pseudo-button, button {
     background: lightgray;
     padding: 0.2rem;
     cursor: pointer;
+    margin: 2px;
 }

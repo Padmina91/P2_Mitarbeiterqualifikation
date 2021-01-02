@@ -174,6 +174,16 @@ class Application:
       raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
 
    @cherrypy.expose
+   def participation_success(self, id_training, id_employee):
+      # TODO hier weiter
+      pass
+
+   @cherrypy.expose
+   def participation_failure(self, id_training, id_employee):
+      # TODO hier weiter
+      pass
+
+   @cherrypy.expose
    def default(self, *arguments, **kwargs):
       msg_s = "unbekannte Anforderung: " + str(arguments) + ' ' + str(kwargs)
       raise cherrypy.HTTPError(404, msg_s)
