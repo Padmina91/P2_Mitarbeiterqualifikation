@@ -132,6 +132,15 @@ class Application:
       return self.view.show_participation_employees(employee_data)
 
    @cherrypy.expose
+   def participation_employee(self, id):
+      if id in self.database.employee_data:
+         employee_data = self.database.employee_data[id]
+         data = self.calculate_participation_employee(id)
+         return self.view.show_participation_employee(id, employee_data, data)
+      else:
+         raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
+
+   @cherrypy.expose
    def register_for_training(self, id_employee, id_training):
       self.database.register_for_training(id_employee, id_training)
       raise cherrypy.HTTPRedirect('/participation_employee/' + id_employee)
@@ -142,18 +151,22 @@ class Application:
       raise cherrypy.HTTPRedirect('/participation_employee/' + id_employee)
 
    @cherrypy.expose
-   def participation_employee(self, id):
-      if id in self.database.employee_data:
-         employee_data = self.database.employee_data[id]
-         data = self.calculate_participation_employee(id)
-         return self.view.show_participation_employee(id, employee_data, data)
-      else:
-         raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
+   def participation_trainings(self):
+      data = self.calculate_participation_trainings()
+      return self.view.show_participation_trainings(data)
 
    @cherrypy.expose
-   def participation_trainings(self):
-      training_data = self.database.training_data
-      return self.view.show_participation_trainings(training_data)
+   def participation_training(self, id):
+      if id in self.database.training_data:
+         data = self.calculate_participation_training(id)
+         training_data = self.database.training_data[id]
+         start_date = self.get_date(training_data[1])
+         end_date = self.get_date(training_data[2])
+         today = datetime.datetime.now()
+         if start_date < today and end_date > today:
+            return self.view.show_participation_training_current(id, training_data, data)
+         elif end_date < today:
+            return self.view.show_participation_training_finished(id, training_data, data)
 
    @cherrypy.expose
    def default(self, *arguments, **kwargs):
@@ -244,6 +257,29 @@ class Application:
             data[0].append([id, training_data[id][0], training_data[id][1], training_data[id][2], training_data[id][3]])
          else:
             data[1].append([id, training_data[id][0], training_data[id][1], training_data[id][2], training_data[id][3]])
+      return data
+
+   def calculate_participation_trainings(self):
+      data = []
+      data.append([]) # laufende Trainings
+      data.append([]) # abgeschlossene Trainings
+      today = datetime.datetime.now()
+      training_data = self.database.training_data
+      for k, v in training_data.items():
+         start_date = self.get_date(v[1])
+         end_date = self.get_date(v[2])
+         if start_date < today and end_date > today:
+            data[0].append([k, v[0], v[1], v[2], v[3], v[4], v[5]])
+         elif end_date < today:
+            data[1].append([k, v[0], v[1], v[2], v[3], v[4], v[5]])
+      return data
+
+   def calculate_participation_training(self, id):
+      data = [] # Aufbau jeweils: [id_employee, name, vorname, akad. Grade, Tätigkeit, Teilnahmestatus]
+      if id in self.database.training_data:
+         for k, v in self.database.employee_data:
+            if id in v[4] and v[4][id] == "angemeldet" or v[4][id] == "nimmt teil" or v[4][id] == "nicht erfolgreich beendet" or v[4][id] == "erfolgreich beendet":
+               data.append([k, v[0], v[1], v[2], v[3], v[4][id]])
       return data
 
    def get_date(self, date):

@@ -55,10 +55,18 @@ class View:
       tpl_name = "participation_employees"
       return self.create_tpl(tpl_name = tpl_name, employee_data_param = employee_data_param)
 
-   def show_participation_trainings(self, training_data_param):
+   def show_participation_trainings(self, data_param):
       tpl_name = "participation_trainings"
-      return self.create_tpl(tpl_name = tpl_name, training_data_param = training_data_param)
+      return self.create_tpl(tpl_name = tpl_name, data_param = data_param)
 
    def show_participation_employee(self, id, employee_data_param, data_param):
       tpl_name = "participation_employee"
       return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, data_param = data_param)
+
+   def show_participation_training_current(self, id, training_data_param, data_param):
+      tpl_name = "participation_training_ongoing"
+      return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param, data_param = data_param)
+
+   def show_participation_training_finished(self, id, training_data_param, data_param):
+      tpl_name = "participation_training_finished"
+      return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param, data_param = data_param)

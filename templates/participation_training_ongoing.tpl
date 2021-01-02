@@ -1,5 +1,5 @@
 <%inherit file="base.tpl"/>
 
 <%block name="body">
-    Platzhalter participation_training
+    ${training_data}
 </%block>
