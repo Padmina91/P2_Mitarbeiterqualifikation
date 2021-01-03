@@ -23,10 +23,10 @@
             % endif
         </div>
         <div class="row-oriented-table rtable-2-cols">
-            <div class="rtable-cell">
+            <div class="rtable-cell no-border">
                 <input type="submit" value="speichern" class="pseudo-button"/>
             </div>
-            <div class="rtable-cell">
+            <div class="rtable-cell no-border">
                 <a class="pseudo-button" href="/edit_training/${key}">abbrechen</a>
             </div>
         </div>

@@ -1,5 +1,5 @@
 body {
-    background: rgba(195, 231, 255, 0.781);
+    background: rgb(176, 223, 255);
     font-family: 'Nunito', sans-serif;
     color: rgb(0, 0, 68);
     font-weight: 500;
@@ -24,12 +24,12 @@ h1 {
 
 .left-flex-row {
     width: 20%;
-    background: rgba(255, 153, 216, 0.781);
+    /*background: rgba(255, 153, 216, 0.781);*/
 }
 
 .right-flex-row {
     width: 80%;
-    background: rgba(98, 224, 255, 0.753);
+    /*background: rgba(98, 224, 255, 0.753);*/
 }
 
 .menu-item {
@@ -50,7 +50,7 @@ h1 {
     flex-wrap: wrap; /* Elemente können bei Platzmangel in die nächste Zeile springen */
     margin: 1px;
     padding: 10px;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 .nested-row-oriented-table {
@@ -69,11 +69,18 @@ h1 {
     padding: 0.5em 0.1em;
     overflow: hidden;
     border: solid 1px black;
-    background: slategray;
+    background: rgb(255, 254, 166);
     text-align: center;
 }
 
+.no-border {
+    border: none;
+    background: none;
+}
+
 .rtable-head {
+    border: solid 1px black;
+    background: rgb(255, 252, 88);
     font-weight: 800;
 }
 

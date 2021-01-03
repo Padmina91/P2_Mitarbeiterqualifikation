@@ -96,10 +96,10 @@
             </div>
         % endif
         <div class="row-oriented-table rtable-2-cols">
-            <div class="rtable-cell">
+            <div class="rtable-cell no-border">
                 <a href="/list_trainings" class="pseudo-button submit-button">speichern</a>
             </div>
-            <div class="rtable-cell">
+            <div class="rtable-cell no-border">
                 <a class="pseudo-button" href="/list_trainings">abbrechen</a>
             </div>
         </div>

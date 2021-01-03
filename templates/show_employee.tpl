@@ -39,7 +39,7 @@
     </div>
     <!-- Page Foot -->
     <div class="row-oriented-table rtable-1-cols">
-        <div class="rtable-cell">
+        <div class="rtable-cell no-border">
             <a class="pseudo-button" href="/list_employees">zurück</a>
         </div>
     </div>

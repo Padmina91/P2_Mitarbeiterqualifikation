@@ -25,7 +25,7 @@
     <!-- Table Foot -->
     <div class="row-oriented-table rtable-1-cols">
         <div class="rtable-cell">
-            <a class="pseudo-button" href="/participation_trainings">zurück</a>
+            <a class="pseudo-button no-border" href="/participation_trainings">zurück</a>
         </div>
     </div>
 </%block>
