@@ -1,5 +1,4 @@
 <%inherit file="base.tpl"/>
-
 <%block name="body">
     <div class="row-oriented-table rtable-2-cols">
         <div class="rtable-cell">Anzahl Mitarbeiter:</div>

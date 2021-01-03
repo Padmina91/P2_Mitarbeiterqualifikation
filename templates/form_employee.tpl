@@ -1,5 +1,4 @@
 <%inherit file="base.tpl"/>
-
 <%block name="body">
     <form action="/save_employee" method="POST">
     <input type="hidden" value="${key}" id="id_param" name="id_param" />

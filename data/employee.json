@@ -8,8 +8,8 @@
          "6": "storniert",
          "9": "angemeldet",
          "8": "storniert",
-         "11": "nimmt teil",
-         "12": "nimmt teil"
+         "11": "abgebrochen",
+         "12": "erfolgreich beendet"
       }
    ],
    "4": [
@@ -20,7 +20,7 @@
       {
          "6": "angemeldet",
          "11": "nimmt teil",
-         "12": "erfolgreich beendet"
+         "12": "nicht erfolgreich beendet"
       }
    ],
    "7": [
@@ -32,7 +32,20 @@
          "6": "angemeldet",
          "8": "erfolgreich beendet",
          "11": "angemeldet",
-         "12": "nicht erfolgreich beendet"
+         "12": "erfolgreich beendet"
+      }
+   ],
+   "14": [
+      "Ackermann",
+      "Mikasa",
+      "Dr.",
+      "Forscherin",
+      {
+         "8": "angemeldet",
+         "9": "angemeldet",
+         "11": "angemeldet",
+         "12": "erfolgreich beendet",
+         "13": "erfolgreich beendet"
       }
    ]
 }

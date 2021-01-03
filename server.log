@@ -4195,3 +4195,289 @@ Request Headers:
 [02/Jan/2021:23:58:36] ENGINE Bus STARTING
 [02/Jan/2021:23:58:36] ENGINE Serving on http://127.0.0.1:8080
 [02/Jan/2021:23:58:36] ENGINE Bus STARTED
+[03/Jan/2021:11:49:21] ENGINE Bus STARTING
+[03/Jan/2021:11:49:21] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:11:49:21] ENGINE Bus STARTED
+[03/Jan/2021:11:53:42] ENGINE Bus STARTING
+[03/Jan/2021:11:53:42] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:11:53:42] ENGINE Bus STARTED
+[03/Jan/2021:14:49:11] ENGINE Bus STARTING
+[03/Jan/2021:14:49:12] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:14:49:12] ENGINE Bus STARTED
+[03/Jan/2021:14:54:25] ENGINE Bus STARTING
+[03/Jan/2021:14:54:25] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:14:54:25] ENGINE Bus STARTED
+[03/Jan/2021:14:54:29] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 189, in evaluation_employees
+    data = self.calculate_evaluation_employees()
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 325, in calculate_evaluation_employees
+    for k, v in self.database.training_data.item():
+AttributeError: 'dict' object has no attribute 'item'
+[03/Jan/2021:14:54:29] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/evaluation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[03/Jan/2021:14:54:50] ENGINE Bus STARTING
+[03/Jan/2021:14:54:50] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:14:54:50] ENGINE Bus STARTED
+[03/Jan/2021:15:13:43] ENGINE Bus STARTING
+[03/Jan/2021:15:13:43] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:13:43] ENGINE Bus STARTED
+[03/Jan/2021:15:13:46] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 189, in evaluation_employees
+    data = self.calculate_evaluation_employees()
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 330, in calculate_evaluation_employees
+    print(6 in employees_alphabetical[0][3])
+TypeError: 'in <string>' requires string as left operand, not int
+[03/Jan/2021:15:13:46] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/evaluation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[03/Jan/2021:15:15:11] ENGINE Bus STARTING
+[03/Jan/2021:15:15:11] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:15:11] ENGINE Bus STARTED
+[03/Jan/2021:15:15:49] ENGINE Bus STARTING
+[03/Jan/2021:15:15:49] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:15:49] ENGINE Bus STARTED
+[03/Jan/2021:15:16:41] ENGINE Bus STARTING
+[03/Jan/2021:15:16:42] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:16:42] ENGINE Bus STARTED
+[03/Jan/2021:15:17:47] ENGINE Bus STARTING
+[03/Jan/2021:15:17:47] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:17:47] ENGINE Bus STARTED
+[03/Jan/2021:15:31:38] ENGINE Bus STARTING
+[03/Jan/2021:15:31:38] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:31:38] ENGINE Bus STARTED
+[03/Jan/2021:15:38:59] ENGINE Bus STARTING
+[03/Jan/2021:15:39:00] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:39:00] ENGINE Bus STARTED
+[03/Jan/2021:15:42:51] ENGINE Bus STARTING
+[03/Jan/2021:15:42:52] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:15:42:52] ENGINE Bus STARTED
+[03/Jan/2021:15:45:22] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 190, in evaluation_employees
+    return self.view.show_evaluation_employees(data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 76, in show_evaluation_employees
+    return self.create_tpl(tpl_name = tpl_name, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 19, in create_tpl
+    template = self.lookup.get_template(tpl_file)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 347, in _check
+    return self._load(template.filename, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 287, in parse
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Unterminated control keyword: 'for' in file 'templates/evaluation_employees.tpl' at line: 5 char: 1
+[03/Jan/2021:15:45:22] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/evaluation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[03/Jan/2021:16:00:54] ENGINE Bus STARTING
+[03/Jan/2021:16:00:54] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:16:00:54] ENGINE Bus STARTED
+[03/Jan/2021:16:02:45] ENGINE Bus STARTING
+[03/Jan/2021:16:02:45] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:16:02:45] ENGINE Bus STARTED
+[03/Jan/2021:16:10:42] ENGINE Bus STARTING
+[03/Jan/2021:16:10:43] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:16:10:43] ENGINE Bus STARTED
+[03/Jan/2021:16:13:05] ENGINE Bus STARTING
+[03/Jan/2021:16:13:05] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:16:13:05] ENGINE Bus STARTED
+[03/Jan/2021:16:13:50] ENGINE Bus STARTING
+[03/Jan/2021:16:13:51] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:16:13:51] ENGINE Bus STARTED
+[03/Jan/2021:16:17:15] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 195, in evaluation_trainings
+    return self.view.show_evaluation_trainings(data)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 80, in show_evaluation_trainings
+    return self.create_tpl(tpl_name = tpl_name, data_param = data_param)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\view.py", line 19, in create_tpl
+    template = self.lookup.get_template(tpl_file)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 347, in _check
+    return self._load(template.filename, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 287, in parse
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Unterminated control keyword: 'for' in file 'templates/evaluation_trainings.tpl' at line: 5 char: 1
+[03/Jan/2021:16:17:15] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/evaluation_employees
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[03/Jan/2021:17:41:45] ENGINE Bus STARTING
+[03/Jan/2021:17:41:45] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:17:41:45] ENGINE Bus STARTED
+[03/Jan/2021:17:47:07] ENGINE Bus STARTING
+[03/Jan/2021:17:47:08] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:17:47:08] ENGINE Bus STARTED
+[03/Jan/2021:17:54:16] ENGINE Bus STARTING
+[03/Jan/2021:17:54:16] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:17:54:16] ENGINE Bus STARTED
+[03/Jan/2021:17:56:10] ENGINE Bus STARTING
+[03/Jan/2021:17:56:10] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:17:56:10] ENGINE Bus STARTED
+[03/Jan/2021:17:58:06] ENGINE Bus STARTING
+[03/Jan/2021:17:58:07] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:17:58:07] ENGINE Bus STARTED
+[03/Jan/2021:18:34:21] ENGINE Bus STARTING
+[03/Jan/2021:18:34:21] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:18:34:21] ENGINE Bus STARTED
+[03/Jan/2021:18:34:24] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 128, in show_training
+    return self.create_show_training(id)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 263, in create_show_training
+    data.append(training_data[0], training_data[1], training_data[2], training_data[7], training_data[6], list())
+TypeError: list.append() takes exactly one argument (6 given)
+[03/Jan/2021:18:34:24] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  DNT: 1
+  UPGRADE-INSECURE-REQUESTS: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/list_trainings
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+[03/Jan/2021:18:35:01] ENGINE Bus STARTING
+[03/Jan/2021:18:35:01] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:18:35:01] ENGINE Bus STARTED
+[03/Jan/2021:18:40:30] ENGINE Bus STARTING
+[03/Jan/2021:18:40:30] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:18:40:30] ENGINE Bus STARTED
+[03/Jan/2021:18:40:41] ENGINE Bus STARTING
+[03/Jan/2021:18:40:41] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:18:40:41] ENGINE Bus STARTED

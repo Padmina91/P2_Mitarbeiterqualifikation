@@ -2,6 +2,7 @@
 
 import cherrypy
 import datetime
+import operator
 from .database import Database
 from .view import View
 
@@ -56,6 +57,8 @@ class Application:
       if self.is_date_correct(von, bis):
          id = id_param
          data = [bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln, [qualification0], [zertifikat]]
+         if data[7][0] == "":
+            data[7] = list()
          if id != "None":
             data[6] = self.database.training_data[id][6] # Qualifikationen (1 bis n)
             data[6][0] = qualification0
@@ -175,13 +178,28 @@ class Application:
 
    @cherrypy.expose
    def participation_success(self, id_training, id_employee):
-      # TODO hier weiter
-      pass
+      self.database.update_participation_status(id_training, id_employee, "erfolgreich beendet")
+      raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
 
    @cherrypy.expose
    def participation_failure(self, id_training, id_employee):
-      # TODO hier weiter
-      pass
+      self.database.update_participation_status(id_training, id_employee, "nicht erfolgreich beendet")
+      raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+
+   @cherrypy.expose
+   def evaluation_employees(self):
+      data = self.calculate_evaluation_employees()
+      return self.view.show_evaluation_employees(data)
+
+   @cherrypy.expose
+   def evaluation_trainings(self):
+      data = self.calculate_evaluation_trainings()
+      return self.view.show_evaluation_trainings(data)
+
+   @cherrypy.expose
+   def evaluation_certificates(self):
+      data = self.calculate_evaluation_certificates()
+      return self.view.show_evaluation_certificates(data)
 
    @cherrypy.expose
    def default(self, *arguments, **kwargs):
@@ -240,7 +258,11 @@ class Application:
       return self.view.create_show_employee(id, employee_data, training_data)
 
    def create_show_training(self, id):
-      data = self.database.training_data[id]
+      training_data = self.database.training_data[id]
+      data = [training_data[0], training_data[1], training_data[2], training_data[7], training_data[6], list()]
+      for employee in self.database.employee_data.values():
+         if id in employee[4]:
+            data[5].append([employee[0], employee[1], employee[2], employee[3], employee[4][id]])
       return self.view.create_show_training(id, data)
 
    def create_edit_qualification(self, id, index, training_data):
@@ -297,6 +319,49 @@ class Application:
             if status == "angemeldet" or status == "nimmt teil" or status == "nicht erfolgreich beendet" or status == "erfolgreich beendet":
                data.append([k, v[0], v[1], v[2], v[3], status])
       return data
+
+   def calculate_evaluation_employees(self):
+      data = list()
+      employees_alphabetical = list()
+      trainings_chronological = list()
+      for v in self.database.employee_data.values():
+         employees_alphabetical.append(v)
+      employees_alphabetical.sort(key=operator.itemgetter(0))
+      for k, v in self.database.training_data.items():
+         trainings_chronological.append([k, v[0], v[1], v[2]])
+      trainings_chronological.sort(key=operator.itemgetter(2))
+      for employee in employees_alphabetical:
+         data.append([employee[0], employee[1], employee[2], employee[3], list()])
+      for i in range(len(employees_alphabetical)):
+         for training in trainings_chronological:
+            if training[0] in employees_alphabetical[i][4]:
+               data[i][4].append([training[1], training[2], training[3], employees_alphabetical[i][4][training[0]]])
+      return data
+
+   def calculate_evaluation_trainings(self):
+      trainings_alphabetical = list()
+      for k, v in self.database.training_data.items():
+         trainings_alphabetical.append([k, v[0], v[1], v[2], v[3], v[4], v[5], list()])
+      trainings_alphabetical.sort(key=operator.itemgetter(1))
+      for training in trainings_alphabetical:
+         for employee in self.database.employee_data.values():
+            if training[0] in employee[4] and employee[4][training[0]] == "erfolgreich beendet":
+               training[7].append([employee[0], employee[1], employee[2], employee[3]])
+         training[7].sort(key=operator.itemgetter(0))
+      return trainings_alphabetical
+
+   def calculate_evaluation_certificates(self):
+      certificates_alphabetical = list()
+      for k, v in self.database.training_data.items():
+         if len(v[7]) == 1:
+            certificates_alphabetical.append([k, v[7][0], list()])
+      certificates_alphabetical.sort(key=operator.itemgetter(1))
+      for i in range(len(certificates_alphabetical)):
+         for employee in self.database.employee_data.values():
+            if certificates_alphabetical[i][0] in employee[4] and employee[4][certificates_alphabetical[i][0]] == "erfolgreich beendet":
+               certificates_alphabetical[i][2].append([employee[0], employee[1], employee[2], employee[3]])
+         certificates_alphabetical[i][2].sort(key=operator.itemgetter(0))
+      return certificates_alphabetical
 
    def get_date(self, date):
       return datetime.datetime(int(date[:4]), int(date[5:7]), int(date[8:10]))

@@ -43,9 +43,9 @@ class View:
       tpl_name = 'show_employee'
       return self.create_tpl(tpl_name = tpl_name, id = id, employee_data_param = employee_data_param, training_data_param = training_data_param)
 
-   def create_show_training(self, id, training_data_param):
+   def create_show_training(self, id, data_param):
       tpl_name = 'show_training'
-      return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param)
+      return self.create_tpl(tpl_name = tpl_name, id = id, data_param = data_param)
 
    def create_edit_qualification(self, id, index, training_data_param):
       tpl_name = "form_qualification"
@@ -70,3 +70,15 @@ class View:
    def show_participation_training_finished(self, id, training_data_param, data_param):
       tpl_name = "participation_training_finished"
       return self.create_tpl(tpl_name = tpl_name, id = id, training_data_param = training_data_param, data_param = data_param)
+
+   def show_evaluation_employees(self, data_param):
+      tpl_name = "evaluation_employees"
+      return self.create_tpl(tpl_name = tpl_name, data_param = data_param)
+
+   def show_evaluation_trainings(self, data_param):
+      tpl_name = "evaluation_trainings"
+      return self.create_tpl(tpl_name = tpl_name, data_param = data_param)
+
+   def show_evaluation_certificates(self, data_param):
+      tpl_name = "evaluation_certificates"
+      return self.create_tpl(tpl_name = tpl_name, data_param = data_param)

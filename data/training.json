@@ -1,6 +1,6 @@
 {
    "6": [
-      " Allgemeine Weiterbildung",
+      "Allgemeine Weiterbildung",
       "2021-01-05",
       "2021-01-08",
       "eine allgemeine Weiterbildung, in der alles M\u00f6gliche vermittelt wird.",
@@ -43,9 +43,7 @@
          "F\u00fchrungskraft Qualifikation",
          "Zweite F\u00fchrungskr\u00e4fte Qualifikation"
       ],
-      [
-         ""
-      ]
+      []
    ],
    "11": [
       "Irgendeine laufende Weiterbildung",
@@ -83,10 +81,9 @@
       "50",
       "1",
       [
-         "Eine abgeschlossene Qualifikation"
+         "Eine abgeschlossene Qualifikation",
+         "Erste weitere Qualifikation"
       ],
-      [
-         ""
-      ]
+      []
    ]
 }

@@ -98,6 +98,13 @@ class Database:
             self.save_employee_data()
       return status
 
+   def update_participation_status(self, id_training, id_employee, new_participation_status):
+      if id_training in self.training_data and id_employee in self.employee_data:
+         training_status = self.employee_data[id_employee][4].get(id_training, 0)
+         if training_status != "storniert" and training_status != "abgebrochen" and training_status != new_participation_status and training_status != 0:
+            self.employee_data[id_employee][4][id_training] = new_participation_status
+            self.save_employee_data()
+
    def delete_employee_entry(self, id):
       status = False
       if self.employee_data.pop(id, None) != None:

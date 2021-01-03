@@ -34,9 +34,9 @@
                 </div>
                 <div class="menu-item menu-4">
                     <h2>Auswertungen</h2>
-                    <li><a href="https://www.google.com/">Mitarbeiter</a></li>
-                    <li><a href="https://www.google.com/">Weiterbildungen</a></li>
-                    <li><a href="https://www.google.com/">Zertifikate</a></li>
+                    <li><a href="/evaluation_employees">Mitarbeiter</a></li>
+                    <li><a href="/evaluation_trainings">Weiterbildungen</a></li>
+                    <li><a href="/evaluation_certificates">Zertifikate</a></li>
                 </div>
             </span>
             <span class="content-flex-container right-flex-row">
