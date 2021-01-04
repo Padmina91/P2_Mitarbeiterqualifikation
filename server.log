@@ -4481,3 +4481,92 @@ Request Headers:
 [03/Jan/2021:18:40:41] ENGINE Bus STARTING
 [03/Jan/2021:18:40:41] ENGINE Serving on http://127.0.0.1:8080
 [03/Jan/2021:18:40:41] ENGINE Bus STARTED
+[03/Jan/2021:18:53:35] ENGINE Bus STARTING
+[03/Jan/2021:18:53:35] ENGINE Serving on http://127.0.0.1:8080
+[03/Jan/2021:18:53:35] ENGINE Bus STARTED
+[04/Jan/2021:15:27:51] ENGINE Bus STARTING
+[04/Jan/2021:15:27:51] ENGINE Serving on http://127.0.0.1:8080
+[04/Jan/2021:15:27:51] ENGINE Bus STARTED
+[04/Jan/2021:19:20:19] ENGINE Bus STARTING
+[04/Jan/2021:19:20:19] ENGINE Serving on http://127.0.0.1:8080
+[04/Jan/2021:19:20:19] ENGINE Bus STARTED
+[04/Jan/2021:20:31:15] ENGINE Bus STARTING
+[04/Jan/2021:20:31:16] ENGINE Serving on http://127.0.0.1:8080
+[04/Jan/2021:20:31:16] ENGINE Bus STARTED
+[04/Jan/2021:20:31:22] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 53, in save_training
+    num_participants_correct = self.validator.is_num_participants_correct(minTeiln, maxTeiln)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\validator.py", line 28, in is_num_participants_correct
+    return minTeiln > 0 and maxTeiln > minTeiln
+TypeError: '>' not supported between instances of 'str' and 'int'
+[04/Jan/2021:20:31:22] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  ORIGIN: http://127.0.0.1:8080
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/edit_training/6
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 265
+[04/Jan/2021:20:31:51] ENGINE Bus STARTING
+[04/Jan/2021:20:31:51] ENGINE Serving on http://127.0.0.1:8080
+[04/Jan/2021:20:31:51] ENGINE Bus STARTED
+[04/Jan/2021:20:31:55] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\application.py", line 53, in save_training
+    num_participants_correct = self.validator.is_num_participants_correct(minTeiln, maxTeiln)
+  File "c:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p2\mq\app\validator.py", line 28, in is_num_participants_correct
+    return int(minTeiln) > 0 and int(maxTeiln) > minTeiln
+TypeError: '>' not supported between instances of 'int' and 'str'
+[04/Jan/2021:20:31:55] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  SEC-CH-UA: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"
+  SEC-CH-UA-MOBILE: ?0
+  ORIGIN: http://127.0.0.1:8080
+  UPGRADE-INSECURE-REQUESTS: 1
+  DNT: 1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+  SEC-FETCH-SITE: same-origin
+  SEC-FETCH-MODE: navigate
+  SEC-FETCH-USER: ?1
+  SEC-FETCH-DEST: document
+  REFERER: http://127.0.0.1:8080/edit_training/6
+  ACCEPT-ENCODING: gzip, deflate, br
+  ACCEPT-LANGUAGE: de,en-US;q=0.9,en;q=0.8
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 265

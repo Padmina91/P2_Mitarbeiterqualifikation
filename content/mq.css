@@ -24,12 +24,12 @@ h1 {
 
 .left-flex-row {
     width: 20%;
-    /*background: rgba(255, 153, 216, 0.781);*/
+    background: rgba(63, 217, 255, 0.753);
 }
 
 .right-flex-row {
     width: 80%;
-    /*background: rgba(98, 224, 255, 0.753);*/
+    background: rgba(98, 224, 255, 0.753);
 }
 
 .menu-item {
@@ -96,6 +96,11 @@ input.rtable-cell {
     background: white;
     border: 1px solid darkgrey;
     border-radius: 0.3rem;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: rgb(72, 0, 189);
+    font-weight: 600;
 }
 
 a.pseudo-button, input.pseudo-button, button {

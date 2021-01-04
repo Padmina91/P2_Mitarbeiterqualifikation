@@ -2,15 +2,17 @@
 
 import cherrypy
 import datetime
-import operator
+
 from .database import Database
 from .view import View
+from .validator import Validator
 
 class Application:
 
    def __init__(self):
       self.database = Database()
       self.view = View()
+      self.validator = Validator()
 
    @cherrypy.expose
    def index(self):
@@ -42,36 +44,24 @@ class Application:
 
    @cherrypy.expose
    def save_employee(self, id_param, name, vorname, akadGrade, taetigkeit):
-      id = id_param
-      data = [name, vorname, akadGrade, taetigkeit]
-      if id != "None":
-         data.append(self.database.employee_data[id][4])
-         self.database.update_employee_entry(id, data)
-      else:
-         data.append({})
-         self.database.new_employee_entry(data)
+      self.database.save_employee(id_param, name, vorname, akadGrade, taetigkeit)
       raise cherrypy.HTTPRedirect('/list_employees')
 
    @cherrypy.expose
    def save_training(self, id_param, bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln, qualification0, zertifikat):
-      if self.is_date_correct(von, bis):
-         id = id_param
-         data = [bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln, [qualification0], [zertifikat]]
-         if data[7][0] == "":
-            data[7] = list()
-         if id != "None":
-            data[6] = self.database.training_data[id][6] # Qualifikationen (1 bis n)
-            data[6][0] = qualification0
-            self.database.update_training_entry(id, data)
-         else:
-            self.database.new_training_entry(data)
-      raise cherrypy.HTTPRedirect('/list_trainings')
+      date_correct = self.validator.is_date_correct(von, bis)
+      num_participants_correct = self.validator.is_num_participants_correct(minTeiln, maxTeiln)
+      if date_correct and num_participants_correct:
+         self.database.save_training(id_param, bezeichnung, von, bis, beschreibung, maxTeiln, minTeiln, qualification0, zertifikat)
+         raise cherrypy.HTTPRedirect('/list_trainings')
+      elif not date_correct:
+         raise cherrypy.HTTPError(500, "Das Datum \"Bis\" darf nicht vor dem Datum \"Von\" liegen.")
+      else:
+         raise cherrypy.HTTPError(500, "Die maximale Teilnehmeranzahl darf nicht geringer als die minimale Teilnehmeranzahl sein. Außerdem dürfen beide Werte nicht 0 oder kleiner sein.")
 
    @cherrypy.expose
    def save_qualification(self, id_param, index, bezeichnung):
-      id = id_param
-      if id != "None" and id in self.database.training_data and len(self.database.training_data[id][6]) >= int(index):
-         self.database.save_qualification(id, index, bezeichnung)
+      if self.database.save_qualification(id_param, index, bezeichnung):
          raise cherrypy.HTTPRedirect('/edit_training/' + id_param)
       else:
          raise cherrypy.HTTPError(500, "Es wurde keine valide Weiterbildung ausgewählt.")
@@ -82,7 +72,7 @@ class Application:
       if id != "None" and id in self.database.training_data:
          training_data = self.database.training_data[id]
          new_index = len(training_data[6])
-         return self.create_edit_qualification(id, new_index, training_data)
+         return self.view.create_edit_qualification(id, new_index, training_data)
       else:
          raise cherrypy.HTTPError(500, "Es wurde keine valide Weiterbildung ausgewählt.")
 
@@ -91,26 +81,20 @@ class Application:
       id = id_param
       if id != "None" and index != "None" and id in self.database.training_data and len(self.database.training_data[id][6]) > int(index):
          training_data = self.database.training_data[id]
-         return self.create_edit_qualification(id, index, training_data)
+         return self.view.create_edit_qualification(id, index, training_data)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
    @cherrypy.expose
    def delete_employee(self, id_param):
-      id = id_param
-      if id != None:
-         deletion_successful = self.database.delete_employee_entry(id)
-      if deletion_successful:
+      if self.database.delete_employee_entry(id_param):
          raise cherrypy.HTTPRedirect('/list_employees')
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
    @cherrypy.expose
    def delete_training(self, id_param):
-      id = id_param
-      if id != None:
-         deletion_successful = self.database.delete_training_entry(id)
-      if deletion_successful:
+      if self.database.delete_training_entry(id_param):
          raise cherrypy.HTTPRedirect('/list_trainings')
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
@@ -118,14 +102,17 @@ class Application:
    @cherrypy.expose
    def show_employee(self, id):
       if id in self.database.employee_data:
-         return self.create_show_employee(id)
+         employee_data = self.database.employee_data[id]
+         training_data = self.database.training_data
+         return self.view.create_show_employee(id, employee_data, training_data)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
    @cherrypy.expose
    def show_training(self, id):
       if id in self.database.training_data:
-         return self.create_show_training(id)
+         data = self.database.calculate_training_data(id)
+         return self.view.create_show_training(id, data)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
@@ -138,67 +125,76 @@ class Application:
    def participation_employee(self, id):
       if id in self.database.employee_data:
          employee_data = self.database.employee_data[id]
-         data = self.calculate_participation_employee(id)
+         data = self.database.calculate_participation_employee(id)
          return self.view.show_participation_employee(id, employee_data, data)
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
    @cherrypy.expose
    def register_for_training(self, id_employee, id_training):
-      self.database.register_for_training(id_employee, id_training)
-      raise cherrypy.HTTPRedirect('/participation_employee/' + id_employee)
+      if self.database.register_for_training(id_employee, id_training):
+         raise cherrypy.HTTPRedirect('/participation_employee/' + id_employee)
+      else:
+         raise cherrypy.HTTPError(500, "Die Anmeldung hat nicht geklappt.")
 
    @cherrypy.expose
    def cancel_registration(self, id_employee, id_training):
-      self.database.cancel_registration(id_employee, id_training)
-      raise cherrypy.HTTPRedirect('/participation_employee/' + id_employee)
+      if self.database.cancel_registration(id_employee, id_training):
+         raise cherrypy.HTTPRedirect('/participation_employee/' + id_employee)
+      else:
+         raise cherrypy.HTTPError(500, "Die Stornierung hat nicht geklappt.")
 
    @cherrypy.expose
    def participation_trainings(self):
-      data = self.calculate_participation_trainings()
+      data = self.database.calculate_participation_trainings()
       return self.view.show_participation_trainings(data)
 
    @cherrypy.expose
-   def participation_training(self, id):
-      if id in self.database.training_data:
-         data = self.calculate_participation_training(id)
-         training_data = self.database.training_data[id]
-         start_date = self.get_date(training_data[1])
-         end_date = self.get_date(training_data[2])
-         today = datetime.datetime.now()
-         if start_date < today and end_date > today:
-            return self.view.show_participation_training_current(id, training_data, data)
-         elif end_date < today:
-            return self.view.show_participation_training_finished(id, training_data, data)
+   def participation_training(self, id_training):
+      if id_training in self.database.training_data:
+         data = self.database.calculate_participation_training(id_training)
+         training_data = self.database.training_data[id_training]
+         date_from = training_data[1]
+         date_until = training_data[2]
+         if self.validator.is_training_currently_running(date_from, date_until):
+            return self.view.show_participation_training_current(id_training, training_data, data)
+         elif self.validator.is_training_finished(date_until):
+            return self.view.show_participation_training_finished(id_training, training_data, data)
 
    @cherrypy.expose
    def cancel_participation(self, id_training, id_employee):
-      self.database.cancel_participation(id_training, id_employee)
-      raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+      if self.database.cancel_participation(id_training, id_employee):
+         raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+      else:
+         raise cherrypy.HTTPError(500, "Die Weiterbildung konnte nicht abgebrochen werden.")
 
    @cherrypy.expose
    def participation_success(self, id_training, id_employee):
-      self.database.update_participation_status(id_training, id_employee, "erfolgreich beendet")
-      raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+      if self.database.update_participation_status(id_training, id_employee, "erfolgreich beendet"):
+         raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+      else:
+         raise cherrypy.HTTPError(500, "Der Status konnte nicht aktualisiert werden.")
 
    @cherrypy.expose
    def participation_failure(self, id_training, id_employee):
-      self.database.update_participation_status(id_training, id_employee, "nicht erfolgreich beendet")
-      raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+      if self.database.update_participation_status(id_training, id_employee, "nicht erfolgreich beendet"):
+         raise cherrypy.HTTPRedirect('/participation_training/' + id_training)
+      else:
+         raise cherrypy.HTTPError(500, "Der Status konnte nicht aktualisiert werden.")
 
    @cherrypy.expose
    def evaluation_employees(self):
-      data = self.calculate_evaluation_employees()
+      data = self.database.calculate_evaluation_employees()
       return self.view.show_evaluation_employees(data)
 
    @cherrypy.expose
    def evaluation_trainings(self):
-      data = self.calculate_evaluation_trainings()
+      data = self.database.calculate_evaluation_trainings()
       return self.view.show_evaluation_trainings(data)
 
    @cherrypy.expose
    def evaluation_certificates(self):
-      data = self.calculate_evaluation_certificates()
+      data = self.database.calculate_evaluation_certificates()
       return self.view.show_evaluation_certificates(data)
 
    @cherrypy.expose
@@ -208,24 +204,7 @@ class Application:
    default.exposed = True
 
    def create_index(self):
-      num_of_employees = len(self.database.read_employee())
-      trainings = self.database.read_training()
-      num_of_trainings_in_planning = 0
-      num_of_trainings_finished = 0
-      num_of_trainings_currently_running = 0
-      for v in trainings.values():
-         start_date = self.get_date(v[1])
-         end_date = self.get_date(v[2])
-         today = datetime.datetime.now()
-         if start_date > today:
-            num_of_trainings_in_planning += 1
-         elif end_date < today:
-            num_of_trainings_finished += 1
-         elif start_date < today and end_date > today:
-            num_of_trainings_currently_running += 1
-         else:
-            print("Fehler. Das End-Datum liegt vor dem Startdatum...")
-      data = [num_of_employees, num_of_trainings_in_planning, num_of_trainings_currently_running, num_of_trainings_finished]
+      data = self.database.calculate_index_data()
       return self.view.create_index(data)
 
    @cherrypy.expose
@@ -251,117 +230,3 @@ class Application:
       else:
          data = self.database.get_training_default()
       return self.view.create_training_form(id, data)
-
-   def create_show_employee(self, id):
-      employee_data = self.database.employee_data[id]
-      training_data = self.database.training_data
-      return self.view.create_show_employee(id, employee_data, training_data)
-
-   def create_show_training(self, id):
-      training_data = self.database.training_data[id]
-      data = [training_data[0], training_data[1], training_data[2], training_data[7], training_data[6], list()]
-      for employee in self.database.employee_data.values():
-         if id in employee[4]:
-            data[5].append([employee[0], employee[1], employee[2], employee[3], employee[4][id]])
-      return self.view.create_show_training(id, data)
-
-   def create_edit_qualification(self, id, index, training_data):
-      return self.view.create_edit_qualification(id, index, training_data)
-
-   def is_date_correct(self, von, bis):
-      start_date = self.get_date(von)
-      end_date = self.get_date(bis)
-      return end_date > start_date
-
-   def calculate_participation_employee(self, id_param):
-      data = [] # [[Trainings, zu denen sich Mitarbeiter anmelden kann], [bereits gebuchte, zukünftige Trainings]], jeweils Aufbau: [id, bezeichnung, von, bis, beschreibung]
-      data.append([])
-      data.append([])
-      employee_data = self.database.employee_data[id_param]
-      training_data = self.database.training_data
-      already_registered_trainings = []
-      today = datetime.datetime.now()
-      future_trainings = []
-      for k, v in employee_data[4].items():
-         if v == "angemeldet":
-            already_registered_trainings.append(k)
-      for k, v in training_data.items():
-         start_date = self.get_date(v[1])
-         if start_date > today:
-            future_trainings.append(k)
-      for id in future_trainings:
-         if id not in already_registered_trainings:
-            data[0].append([id, training_data[id][0], training_data[id][1], training_data[id][2], training_data[id][3]])
-         else:
-            data[1].append([id, training_data[id][0], training_data[id][1], training_data[id][2], training_data[id][3]])
-      return data
-
-   def calculate_participation_trainings(self):
-      data = []
-      data.append([]) # laufende Trainings
-      data.append([]) # abgeschlossene Trainings
-      today = datetime.datetime.now()
-      training_data = self.database.training_data
-      for k, v in training_data.items():
-         start_date = self.get_date(v[1])
-         end_date = self.get_date(v[2])
-         if start_date < today and end_date > today:
-            data[0].append([k, v[0], v[1], v[2], v[3], v[4], v[5]])
-         elif end_date < today:
-            data[1].append([k, v[0], v[1], v[2], v[3], v[4], v[5]])
-      return data
-
-   def calculate_participation_training(self, id):
-      data = [] # Aufbau jeweils: [id_employee, name, vorname, akad. Grade, Tätigkeit, Teilnahmestatus]
-      if id in self.database.training_data:
-         for k, v in self.database.employee_data.items():
-            status = v[4].get(id, 0)
-            if status == "angemeldet" or status == "nimmt teil" or status == "nicht erfolgreich beendet" or status == "erfolgreich beendet":
-               data.append([k, v[0], v[1], v[2], v[3], status])
-      return data
-
-   def calculate_evaluation_employees(self):
-      data = list()
-      employees_alphabetical = list()
-      trainings_chronological = list()
-      for v in self.database.employee_data.values():
-         employees_alphabetical.append(v)
-      employees_alphabetical.sort(key=operator.itemgetter(0))
-      for k, v in self.database.training_data.items():
-         trainings_chronological.append([k, v[0], v[1], v[2]])
-      trainings_chronological.sort(key=operator.itemgetter(2))
-      for employee in employees_alphabetical:
-         data.append([employee[0], employee[1], employee[2], employee[3], list()])
-      for i in range(len(employees_alphabetical)):
-         for training in trainings_chronological:
-            if training[0] in employees_alphabetical[i][4]:
-               data[i][4].append([training[1], training[2], training[3], employees_alphabetical[i][4][training[0]]])
-      return data
-
-   def calculate_evaluation_trainings(self):
-      trainings_alphabetical = list()
-      for k, v in self.database.training_data.items():
-         trainings_alphabetical.append([k, v[0], v[1], v[2], v[3], v[4], v[5], list()])
-      trainings_alphabetical.sort(key=operator.itemgetter(1))
-      for training in trainings_alphabetical:
-         for employee in self.database.employee_data.values():
-            if training[0] in employee[4] and employee[4][training[0]] == "erfolgreich beendet":
-               training[7].append([employee[0], employee[1], employee[2], employee[3]])
-         training[7].sort(key=operator.itemgetter(0))
-      return trainings_alphabetical
-
-   def calculate_evaluation_certificates(self):
-      certificates_alphabetical = list()
-      for k, v in self.database.training_data.items():
-         if len(v[7]) == 1:
-            certificates_alphabetical.append([k, v[7][0], list()])
-      certificates_alphabetical.sort(key=operator.itemgetter(1))
-      for i in range(len(certificates_alphabetical)):
-         for employee in self.database.employee_data.values():
-            if certificates_alphabetical[i][0] in employee[4] and employee[4][certificates_alphabetical[i][0]] == "erfolgreich beendet":
-               certificates_alphabetical[i][2].append([employee[0], employee[1], employee[2], employee[3]])
-         certificates_alphabetical[i][2].sort(key=operator.itemgetter(0))
-      return certificates_alphabetical
-
-   def get_date(self, date):
-      return datetime.datetime(int(date[:4]), int(date[5:7]), int(date[8:10]))

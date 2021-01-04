@@ -5,7 +5,7 @@
       "2021-01-08",
       "eine allgemeine Weiterbildung, in der alles M\u00f6gliche vermittelt wird.",
       "30",
-      "10",
+      "5",
       [
          "Allgemeine Qualifikation",
          "Zweite Allgemeine Qualifikation",
@@ -83,6 +83,18 @@
       [
          "Eine abgeschlossene Qualifikation",
          "Erste weitere Qualifikation"
+      ],
+      []
+   ],
+   "18": [
+      "Selbstverteidigung",
+      "2021-01-18",
+      "2021-01-29",
+      "Moderne waffenlose Selbstverteidigung",
+      "20",
+      "5",
+      [
+         "Selbstverteidiger"
       ],
       []
    ]

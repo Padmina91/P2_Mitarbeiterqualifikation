@@ -8,8 +8,8 @@
             <div class="rtable-head">Von</div>
             <div class="rtable-head">Bis</div>
             <div class="rtable-head">Beschreibung</div>
-            <div class="rtable-head">maximale Teilnehmeranzahl</div>
             <div class="rtable-head">minimale Teilnehmeranzahl</div>
+            <div class="rtable-head">maximale Teilnehmeranzahl</div>
             <div class="rtable-head">Aktion</div>
             <!-- Table Content -->
             % for training in data[0]:
@@ -17,8 +17,8 @@
                 <div class="rtable-cell">${training[2]}</div>
                 <div class="rtable-cell">${training[3]}</div>
                 <div class="rtable-cell">${training[4]}</div>
-                <div class="rtable-cell">${training[5]}</div>
                 <div class="rtable-cell">${training[6]}</div>
+                <div class="rtable-cell">${training[5]}</div>
                 <div class="rtable-cell nested-row-oriented-table">
                     <a class="pseudo-button nested-cell" href="/participation_training/${training[0]}">auswählen</a>
                 </div>
@@ -33,8 +33,8 @@
             <div class="rtable-head">Von</div>
             <div class="rtable-head">Bis</div>
             <div class="rtable-head">Beschreibung</div>
-            <div class="rtable-head">maximale Teilnehmeranzahl</div>
             <div class="rtable-head">minimale Teilnehmeranzahl</div>
+            <div class="rtable-head">maximale Teilnehmeranzahl</div>
             <div class="rtable-head">Aktion</div>
             <!-- Table Content -->
             % for training in data[1]:
@@ -42,8 +42,8 @@
                 <div class="rtable-cell">${training[2]}</div>
                 <div class="rtable-cell">${training[3]}</div>
                 <div class="rtable-cell">${training[4]}</div>
-                <div class="rtable-cell">${training[5]}</div>
                 <div class="rtable-cell">${training[6]}</div>
+                <div class="rtable-cell">${training[5]}</div>
                 <div class="rtable-cell nested-row-oriented-table">
                     <a class="pseudo-button nested-cell" href="/participation_training/${training[0]}">auswählen</a>
                 </div>

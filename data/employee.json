@@ -19,7 +19,7 @@
       "Prof an der HSNR",
       {
          "6": "angemeldet",
-         "11": "nimmt teil",
+         "11": "abgebrochen",
          "12": "nicht erfolgreich beendet"
       }
    ],
@@ -31,21 +31,28 @@
       {
          "6": "angemeldet",
          "8": "erfolgreich beendet",
-         "11": "angemeldet",
+         "11": "abgebrochen",
          "12": "erfolgreich beendet"
       }
    ],
    "14": [
       "Ackermann",
       "Mikasa",
-      "Dr.",
-      "Forscherin",
+      "Prof. Dr. Dr.",
+      "Titanenforscherin",
       {
          "8": "angemeldet",
          "9": "angemeldet",
-         "11": "angemeldet",
+         "11": "abgebrochen",
          "12": "erfolgreich beendet",
          "13": "erfolgreich beendet"
       }
+   ],
+   "17": [
+      "J\u00e4ger",
+      "Eren",
+      "Prof. Dr.",
+      "Titanenforscher",
+      {}
    ]
 }
