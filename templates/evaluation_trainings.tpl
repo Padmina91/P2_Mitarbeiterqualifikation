@@ -1,9 +1,11 @@
 <%inherit file="base.tpl"/>
 <%block name="body">
     % for training in data:
-        <h2><li>
-            Erfolgreiche Teilnehmer an "${training[1]}", vom ${training[2]} bis ${training[3]}:
-        </h2></li>
+        <ul>
+            <li>
+                <h2>Erfolgreiche Teilnehmer an "${training[1]}", vom ${training[2]} bis ${training[3]}:</h2>
+            </li>
+        </ul>
         % if len(training[7]) > 0:
             <div class="row-oriented-table rtable-4-cols">
                 <!-- Table Head -->

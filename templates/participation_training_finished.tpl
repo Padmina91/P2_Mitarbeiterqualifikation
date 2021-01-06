@@ -1,6 +1,6 @@
 <%inherit file="base.tpl"/>
 <%block name="body">
-    <h1>Abgeschlossene Weiterbildungen</h1>
+    <h1>${training_data[0]} vom ${training_data[1]} bis ${training_data[2]}:</h1>
     <div class="row-oriented-table rtable-6-cols">
         <!-- Table Head -->
         <div class="rtable-head">Name</div>
@@ -24,8 +24,8 @@
     </div>
     <!-- Table Foot -->
     <div class="row-oriented-table rtable-1-cols">
-        <div class="rtable-cell">
-            <a class="pseudo-button no-border" href="/participation_trainings">zurück</a>
+        <div class="rtable-cell no-border">
+            <a class="pseudo-button" href="/participation_trainings">zurück</a>
         </div>
     </div>
 </%block>

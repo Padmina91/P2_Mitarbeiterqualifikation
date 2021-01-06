@@ -1,9 +1,11 @@
 <%inherit file="base.tpl"/>
 <%block name="body">
     % for employee in data:
-        <h2><li>
-            ${employee[0]}, ${employee[1]}, ${employee[2]}, ${employee[3]}
-        </h2></li>
+        <ul>
+            <li>
+                <h2>${employee[0]}, ${employee[1]}, ${employee[2]}, ${employee[3]}</h2>
+            </li>
+        </ul>
         <div class="row-oriented-table rtable-4-cols">
             <!-- Table Head -->
             <div class="rtable-head">Bezeichnung</div>

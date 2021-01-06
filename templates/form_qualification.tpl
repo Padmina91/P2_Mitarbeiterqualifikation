@@ -30,4 +30,5 @@
                 <a class="pseudo-button" href="/edit_training/${key}">abbrechen</a>
             </div>
         </div>
+    </form>
 </%block>

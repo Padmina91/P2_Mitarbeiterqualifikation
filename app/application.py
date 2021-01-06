@@ -203,10 +203,6 @@ class Application:
       raise cherrypy.HTTPError(404, msg_s)
    default.exposed = True
 
-   def create_index(self):
-      data = self.database.calculate_index_data()
-      return self.view.create_index(data)
-
    @cherrypy.expose
    def create_list_employees(self):
       data = self.database.read_employee()
@@ -216,6 +212,10 @@ class Application:
    def create_list_trainings(self):
       data = self.database.read_training()
       return self.view.create_list_trainings(data)
+
+   def create_index(self):
+      data = self.database.calculate_index_data()
+      return self.view.create_index(data)
 
    def create_epmloyee_form(self, id = None):
       if id != None:

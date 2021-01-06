@@ -1,9 +1,11 @@
 <%inherit file="base.tpl"/>
 <%block name="body">
     % for certificate in data:
-        <h2><li>
-            Mitarbeiter mit dem Zertifikat "${certificate[1]}":
-        </h2></li>
+        <ul>
+            <li>
+                <h2>Mitarbeiter mit dem Zertifikat "${certificate[1]}":</h2>
+            </li>
+        </ul>
         % if len(certificate[2]) > 0:
             <div class="row-oriented-table rtable-4-cols">
                 <!-- Table Head -->
